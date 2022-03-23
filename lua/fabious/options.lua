@@ -35,7 +35,7 @@ vim.opt.updatetime = 300                        -- faster completion (4000ms def
 vim.opt.wrap = false                            -- display lines as one long line
 vim.opt.writebackup = false                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 
-vim.cmd [[colorscheme onedark]]
+vim.cmd [[colorscheme tokyonight]]
 vim.cmd [[
   augroup YankHighlight
     autocmd!

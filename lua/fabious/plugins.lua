@@ -45,7 +45,7 @@ return packer.startup(function(use)
   use "tpope/vim-surround"
   use 'tpope/vim-fugitive'
   use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
-  use 'mjlbach/onedark.nvim'
+  use 'folke/tokyonight.nvim'
   use 'numToStr/Comment.nvim' 
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use 'mjlbach/onedark.nvim'
