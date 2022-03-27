@@ -48,7 +48,6 @@ return packer.startup(function(use)
   use 'folke/tokyonight.nvim'
   use 'numToStr/Comment.nvim' 
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-  use 'mjlbach/onedark.nvim'
   use "nvim-lualine/lualine.nvim"
   use 'lukas-reineke/indent-blankline.nvim'
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
