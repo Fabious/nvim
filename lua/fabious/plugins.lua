@@ -42,34 +42,19 @@ packer.init {
 return packer.startup(function(use)
   -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
+  use 'folke/tokyonight.nvim'
   use "tpope/vim-surround"
   use 'tpope/vim-fugitive'
   use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
-  use 'folke/tokyonight.nvim'
   use 'numToStr/Comment.nvim' 
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "nvim-lualine/lualine.nvim"
   use 'lukas-reineke/indent-blankline.nvim'
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   use {
-    'VonHeikemen/fine-cmdline.nvim',
-    requires = {
-      {'MunifTanjim/nui.nvim'}
-    }
-  }
-  use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-  use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-  use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
-  use "hrsh7th/cmp-path" -- path completions
-  use 'L3MON4D3/LuaSnip' -- Snippets plugin
-  use "saadparwaiz1/cmp_luasnip" -- snippet completions
-  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
