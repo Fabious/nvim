@@ -52,6 +52,12 @@ return packer.startup(function(use)
   use 'lukas-reineke/indent-blankline.nvim'
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   use {
+    'VonHeikemen/fine-cmdline.nvim',
+    requires = {
+      {'MunifTanjim/nui.nvim'}
+    }
+  }
+  use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }

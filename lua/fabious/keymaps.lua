@@ -14,6 +14,9 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Enter commands
+keymap('n', '<CR>', ':FineCmdline<CR>', opts)
+
 -- QQ
 keymap('n', 'Q', '<nop>', {noremap = true})
 keymap('n', 'q:', '<nop>', {noremap = true})
