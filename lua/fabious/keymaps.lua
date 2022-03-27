@@ -1,6 +1,14 @@
 local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
+-- Modes
+--   normal_mode = "n",
+--   insert_mode = "i",
+--   visual_mode = "v",
+--   visual_block_mode = "x",
+--   term_mode = "t",
+--   command_mode = "c",
+
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
@@ -10,17 +18,27 @@ vim.g.maplocalleader = " "
 keymap('n', 'Q', '<nop>', {noremap = true})
 keymap('n', 'q:', '<nop>', {noremap = true})
 
--- Modes
---   normal_mode = "n",
---   insert_mode = "i",
---   visual_mode = "v",
---   visual_block_mode = "x",
---   term_mode = "t",
---   command_mode = "c",
-
--- save/quit --
+-- Save
 keymap("n", "<leader>w", ":w<cr>", opts)
-keymap("n", "<leader>q", ":q<cr>", opts)
+
+-- Safe quit
+keymap('n', '<Leader>qq', ':quitall<CR>', opts)
+
+-- Force quit
+keymap('n', '<Leader>Q', ':quitall!<CR>', opts)
+
+-- Close buffer
+keymap('n', '<Leader>bq', ':bdelete<CR>', opts)
+
+-- Navigate buffers
+keymap("n", "<S-l>", ":bnext<CR>", opts)
+keymap("n", "<S-h>", ":bprevious<CR>", opts)
+
+-- Select all text in current buffer
+keymap('n', '<Leader>a', 'ggVG', opts)
+
+-- Clear messages
+keymap('n', '<Leader><space>', ":echo ''<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -37,9 +55,6 @@ keymap("n", "<C-Down>", ":resize -2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
--- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
