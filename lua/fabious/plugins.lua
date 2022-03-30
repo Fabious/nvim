@@ -46,7 +46,10 @@ return packer.startup(function(use)
   use "tpope/vim-surround"
   use 'tpope/vim-fugitive'
   use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
-  use 'numToStr/Comment.nvim' 
+  use {
+    'numToStr/Comment.nvim',
+    config = function() require'Comment'.setup {} end
+  }
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "nvim-lualine/lualine.nvim"
   use 'lukas-reineke/indent-blankline.nvim'
