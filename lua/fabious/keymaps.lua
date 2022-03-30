@@ -19,16 +19,13 @@ keymap('n', 'Q', '<nop>', {noremap = true})
 keymap('n', 'q:', '<nop>', {noremap = true})
 
 -- Save
-keymap("n", "<leader>w", ":w<cr>", opts)
+keymap("n", "<leader>w", ":w<CR>", opts)
 
--- Safe quit
-keymap('n', '<Leader>qq', ':quitall<CR>', opts)
+-- Quit
+keymap('n', '<Leader>q', ':q<CR>', opts)
 
--- Force quit
+-- Force quit all
 keymap('n', '<Leader>Q', ':quitall!<CR>', opts)
-
--- Close buffer
-keymap('n', '<Leader>bq', ':bdelete<CR>', opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
@@ -46,7 +43,6 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 keymap("n", "<leader>o", ":only<cr>", opts)
 
 -- Resize with arrows
@@ -74,6 +70,12 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+
+-- Files explorer
+keymap("n", "<leader>e", ":Lex 30<CR>", opts)
+keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
+keymap("n", "<leader>n", ":NvimTreeFindFile<CR>", opts)
 
 -- Telescope --
 keymap('n', '<C-b>', [[<cmd>lua require('telescope.builtin').buffers()<CR>]], opts)
