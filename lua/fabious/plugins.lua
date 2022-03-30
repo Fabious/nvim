@@ -54,6 +54,7 @@ return packer.startup(function(use)
   use "nvim-lualine/lualine.nvim"
   use 'lukas-reineke/indent-blankline.nvim'
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
