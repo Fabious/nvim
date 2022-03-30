@@ -34,9 +34,6 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Select all text in current buffer
 keymap('n', '<Leader>a', 'ggVG', opts)
 
--- Clear messages
-keymap('n', '<Leader><space>', ":echo ''<CR>", opts)
-
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)

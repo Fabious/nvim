@@ -65,6 +65,12 @@ return packer.startup(function(use)
     },
     config = function() require'nvim-tree'.setup {} end
   }
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      require("which-key").setup {}
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
